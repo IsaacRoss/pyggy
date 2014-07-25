@@ -1,0 +1,9 @@
+{
+  "name": "pyg",
+  "scripts": {
+  		"test": "jasmine-node ./tests/tests.spec.js"
+  	},
+  "dependencies": {
+    "commander": "^2.3.0"
+  }
+}
