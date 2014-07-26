@@ -1,9 +1,9 @@
 var pyg;
 
-
 beforeEach(function(){
-	pyg = require('../lib/pyg');
+	pyg = require('../lib/pyg.js');
 })
+
 
 describe('pyg latin converter', function(){
 	it('should be able to convert a simple sentence into pig latin', function(done){
