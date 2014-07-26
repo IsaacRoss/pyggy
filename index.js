@@ -1,4 +1,5 @@
-var program = require('commander'),
+var fs = require('fs'), 
+	program = require('commander'),
 	pkg = require('./package.json'),
 	reader = require('./lib/reader'),
 	pyg = require('./lib/pyg');
@@ -11,12 +12,14 @@ program
 
 
 if(program.file && program.destination){
+	var wstream = fs.createWriteStream(program.destination);
 	reader.read(program.file, function(data){
 		var sentences = pyg.getSentences(data.toString());
 		sentences.forEach(function(s){
 			var piggy = pyg.processSentence(s);
-			console.log(piggy);
+			wstream.write(piggy);
 		})
+		wstream.end();
 	})
 }else{
 	console.error('not how you use this. use --help for usage.');
