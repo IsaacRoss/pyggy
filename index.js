@@ -1,9 +1,23 @@
 var program = require('commander'),
-	pkg = require('./package.json');
+	pkg = require('./package.json'),
+	reader = require('./lib/reader'),
+	pyg = require('./lib/pyg');
 
 program
 	.version(pkg.version)
 	.option('-f --file <path>', 'File to be converted')
+	.option('-d --destination <path>', 'File to make')
 	.parse(process.argv);
 
-console.log(program.file);
+
+if(program.file && program.destination){
+	reader.read(program.file, function(data){
+		var sentences = pyg.getSentences(data.toString());
+		sentences.forEach(function(s){
+			var piggy = pyg.processSentence(s);
+			console.log(piggy);
+		})
+	})
+}else{
+	console.error('not how you use this. use --help for usage.');
+}
