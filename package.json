@@ -1,9 +1,19 @@
-{
-  "name": "pyg",
-  "scripts": {
-  		"test": "jasmine-node ./tests/tests.spec.js"
-  	},
-  "dependencies": {
-    "commander": "^2.3.0"
-  }
+{  
+   "name":"pyggy",
+   "author":"Isaac Ross",
+   "description":"potentially the dumbest command-line tool ever. convert file to pyg latin",
+   "scripts":{  
+      "test":"jasmine-node ./tests/tests.spec.js"
+   },
+   "engines":{  
+      "node":">=0.10"
+   },
+   "version":"0.0.1",
+   "bin":{  
+      "pyggy":"./index.js"
+   },
+   "dependencies":{  
+      "commander":"^2.3.0"
+   }
 }
+

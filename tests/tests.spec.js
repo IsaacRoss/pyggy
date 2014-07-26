@@ -1,5 +1,4 @@
-var pyg,
-	reader;
+var pyg;
 
 
 beforeEach(function(){

@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var fs = require('fs'), 
 	program = require('commander'),
 	pkg = require('./package.json'),
@@ -20,7 +22,9 @@ if(program.file && program.destination){
 			wstream.write(piggy);
 		})
 		wstream.end();
+		process.exit(0);
 	})
 }else{
 	console.error('not how you use this. use --help for usage.');
+	process.exit(1);
 }
