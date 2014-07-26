@@ -1,5 +1,6 @@
 {  
    "name":"pyggy",
+   "version":"0.0.1",
    "author":"Isaac Ross",
    "description":"potentially the dumbest command-line tool ever. convert file to pyg latin",
    "scripts":{  
@@ -8,10 +9,23 @@
    "engines":{  
       "node":">=0.10"
    },
-   "version":"0.0.1",
    "bin":{  
       "pyggy":"./index.js"
    },
+   "repository": {
+   	"type":"git",
+   	"url": "https://github.com/IsaacRoss/pyggy.git"
+   },
+   "keywords": [
+   	"cli",
+   	"pyg",
+   	"latin"
+   ],
+   "license": "MIT",
+   "bugs":{
+   	"url":"https://github.com/IsaacRoss/pyggy/issues"
+   },
+   "homepage": "https://github.com/IsaacRoss/pyggy",
    "dependencies":{  
       "commander":"^2.3.0"
    }
