@@ -1,7 +1,7 @@
 # pyggy
 ===
 
-###Impress your friends by making completely useless files, even more useless by converting them to pyg latin!!!
+###Impress your friends by making completely useless files even more useless by converting them to pyg latin!!!
 
 This project is a command line utility that can take the contents of a file, translate it to pyg latin, and output it to another file. Why one earth anyone would want to do this, is beyond me. Why on earth anyone would want to program this, is also beyond me. 
 
