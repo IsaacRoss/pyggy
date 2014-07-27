@@ -14,13 +14,15 @@ program
 
 
 if(program.file && program.destination){
-	var wstream = fs.createWriteStream(program.destination);
+	var wstream = fs.createWriteStream(program.destination, {'flags':'w'}),
+		text = "";
 	reader.read(program.file, function(data){
 		var sentences = pyg.getSentences(data.toString());
+		
 		sentences.forEach(function(s){
-			var piggy = pyg.processSentence(s);
-			wstream.write(piggy);
+			text += pyg.processSentence(s);
 		})
+		wstream.write(text);
 		wstream.end();
 		process.exit(0);
 	})
