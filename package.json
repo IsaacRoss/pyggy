@@ -1,6 +1,6 @@
 {  
    "name":"pyggy",
-   "version":"0.0.1",
+   "version":"0.0.2",
    "author":"Isaac Ross",
    "description":"potentially the dumbest command-line tool ever. convert file to pyg latin",
    "scripts":{  
